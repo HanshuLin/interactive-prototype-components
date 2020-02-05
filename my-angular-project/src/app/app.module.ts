@@ -5,14 +5,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import {CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule} from '@angular/core';
 import { AppComponent } from './app.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
+import { TopBarComponent } from './main-page/top-bar/top-bar.component';
 import { CartService } from './cart.service';
 
-import { CardModuleV1 } from '@appd/components';
-import {MyElementComponent} from './element/my-element.component';
-import {MyChartComponent} from './my-chart/my-chart.component';
+import { CardModuleV1, CartesianModuleV1 } from '@appd/components';
+import {MyElementComponent} from './main-page/my-element.component';
 import {WebComponentListComponent} from './web-component-list/web-component-list.component';
-import {AppdComponentListComponent} from './appd-component-list/appd-component-list.component';
+import {AppdLineChartComponent} from './web-component-list/appd-web-component/line-chart/appd-line-chart.component';
+
 import {createCustomElement} from '@angular/elements';
 
 @NgModule({
@@ -21,10 +21,9 @@ import {createCustomElement} from '@angular/elements';
     HttpClientModule,
     ReactiveFormsModule,
     CardModuleV1,
+    CartesianModuleV1,
     RouterModule.forRoot([
       { path: '', component: MyElementComponent },
-      { path: 'chart', component: MyChartComponent },
-      { path: 'appd', component: AppdComponentListComponent },
       { path: 'web', component: WebComponentListComponent }
     ])
   ],
@@ -32,11 +31,11 @@ import {createCustomElement} from '@angular/elements';
     AppComponent,
     TopBarComponent,
     MyElementComponent,
-    AppdComponentListComponent,
-    WebComponentListComponent,
-    MyChartComponent
+    AppdLineChartComponent,
+    WebComponentListComponent
   ],
-  entryComponents: [WebComponentListComponent],
+  entryComponents: [
+    AppdLineChartComponent],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
@@ -46,8 +45,8 @@ import {createCustomElement} from '@angular/elements';
 export class AppModule {
 
   constructor(injector: Injector) {
-    const el = createCustomElement(WebComponentListComponent, {injector});
-    customElements.define('web-comp', el);
+    const lineChartElem = createCustomElement(AppdLineChartComponent, {injector});
+    customElements.define('appd-line-chart', lineChartElem);
   }
 
   ngDoBootstrap() {}
