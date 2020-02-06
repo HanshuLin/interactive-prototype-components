@@ -13,8 +13,13 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
+  margin: 0px 30px;
+}
+
+.appd-element {
+  padding: 20px;
+  background: #fcfcfc;
+  margin-bottom: 20px;
 }
 
 router-outlet + *  {
@@ -137,6 +142,82 @@ app-top-bar h1 {
   background-color: #EEEEEE;
 }
 
+/* Appd Component */
+.ui-kit-chart-v1 .highcharts-legend-item > span {
+  font-weight: normal;
+  padding: 6px 3px;
+  margin: 0;
+  border-radius: 3px;
+}
+
+.ui-kit-chart-v1 .ui-kit-chart-legend {
+  display: flex;
+  align-items: center;
+  height: 13px;
+  color: #19212B;
+  fill: #19212B;
+  box-sizing: border-box;
+}
+
+.ui-kit-series-symbol.ui-kit-series-symbol .clip-svg {
+  width: 0;
+  height: 0;
+}
+
+.ui-kit-series-symbol.ui-kit-series-symbol {
+  display: flex;
+  margin: 0;
+  margin-right: 8px;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  white-space: nowrap;
+  cursor: pointer;
+  text-align: left;
+}
+.ui-kit-chart-v1 .ui-kit-chart-legend .ui-kit-chart-legend-name {
+  max-width: 125px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ui-kit-chart-v1.ui-kit-cartesian-chart div.highcharts-yaxis {
+  display: flex;
+  flex-direction: row;
+  top: -20px !important;
+  margin-left: 5px;
+  width: calc(50% - 20px) !important;
+}
+
+.ui-kit-chart-v1.ui-kit-cartesian-chart div.highcharts-yaxis > span {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap !important;
+}
+
+div.ui-kit-pie-chart-v1 span.highcharts-title {
+  transform: translate(-50%, -100%);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  cursor: pointer;
+}
+div.ui-kit-pie-chart-v1 span.highcharts-subtitle {
+  transform: translate(-50%, 0);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  cursor: pointer;
+}
+ui-kit-pie-chart-v1 > div.title-measure-elem {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #19212B;
+  color: #585E67;
+  line-height: 1.3;
+  position: absolute;
+}
 
 /*
 Copyright Google LLC. All Rights Reserved.

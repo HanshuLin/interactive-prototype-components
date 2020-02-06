@@ -1,7 +1,14 @@
 <h3>My Web Element</h3>
 
-<p>
-  <a routerLink="/chart">My Chart</a>
-</p>
+<appd-banner></appd-banner>
 
-<appd-line-chart></appd-line-chart>
+<div style="display: flex;">
+  <appd-bar-chart style="width: 50%;"></appd-bar-chart>
+  <appd-line-chart style="width: 50%;"></appd-line-chart>
+</div>
+<div style="display: flex;">
+  <appd-area-chart style="width: 50%;"></appd-area-chart>
+  <appd-pie-chart style="width: 50%;"></appd-pie-chart>
+</div>
+
+

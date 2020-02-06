@@ -3,16 +3,17 @@ import {
   CartesianChartConfig,
   CartesianSeriesConfig,
   CartesianVisualizationType,
+  CartesianSeriesStackingType,
+  AxisType,
   LegendAlign} from '@appd/components';
 import {range} from 'lodash';
-import {NCovData} from '../bar-chart/appd-bar-chart.component';
 
 @Component({
-  selector: 'app-appd-line-chart',
-  templateUrl: './appd-line-chart.component.html',
-  styleUrls: ['./appd-line-chart.component.css']
+  selector: 'app-appd-area-chart',
+  templateUrl: './appd-area-chart.component.html',
+  styleUrls: ['./appd-area-chart.component.css']
 })
-export class AppdLineChartComponent implements OnInit{
+export class AppdAreaChartComponent implements OnInit {
 
   public chartConfig: any;
   public seriesConfigs: any;
@@ -26,16 +27,18 @@ export class AppdLineChartComponent implements OnInit{
 
   private getChartConfig(): CartesianChartConfig {
     return {
-      title: 'Line Chart',
+      title: 'Area Chart',
       legend: {
         align: LegendAlign.BOTTOM,
+        visible: true
       },
-      yAxis: [
-        {
-          title: 'Y Title',
-          unit: 'ms',
-        },
-      ]
+      xAxis: [{
+        type: AxisType.DATETIME
+      }],
+      yAxis: [{
+        title: 'Y Title'
+      }],
+      stacking: CartesianSeriesStackingType.NORMAL
     };
   }
 
@@ -43,7 +46,7 @@ export class AppdLineChartComponent implements OnInit{
     return [
       {
         name: 'S2',
-        visualizationType: CartesianVisualizationType.Line,
+        visualizationType: CartesianVisualizationType.Area,
         data: [
           {
             x: new Date(2017, 0, 1).getTime(),
@@ -85,7 +88,7 @@ export class AppdLineChartComponent implements OnInit{
       },
       {
         name: 'S1',
-        visualizationType: CartesianVisualizationType.Line,
+        visualizationType: CartesianVisualizationType.Area,
         data: [
           {
             x: new Date(2017, 0, 1).getTime(),
