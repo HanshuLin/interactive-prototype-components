@@ -13,8 +13,7 @@ import {NCovCityTimeseries, NCovTimeseriesDataPoint} from '../line-chart/appd-li
 
 @Component({
   selector: 'app-appd-area-chart',
-  templateUrl: './appd-area-chart.component.html',
-  styleUrls: ['./appd-area-chart.component.css']
+  templateUrl: './appd-area-chart.component.html'
 })
 export class AppdAreaChartComponent implements OnInit {
 

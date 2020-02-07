@@ -12,8 +12,7 @@ import * as _ from "lodash";
 
 @Component({
   selector: 'app-appd-bar-chart',
-  templateUrl: './appd-bar-chart.component.html',
-  styleUrls: ['./appd-bar-chart.component.css']
+  templateUrl: './appd-bar-chart.component.html'
 })
 export class AppdBarChartComponent implements OnInit{
 

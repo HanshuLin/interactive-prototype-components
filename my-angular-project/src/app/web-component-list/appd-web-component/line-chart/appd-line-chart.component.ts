@@ -10,8 +10,7 @@ import * as _ from 'lodash';
 
 @Component({
   selector: 'app-appd-line-chart',
-  templateUrl: './appd-line-chart.component.html',
-  styleUrls: ['./appd-line-chart.component.css']
+  templateUrl: './appd-line-chart.component.html'
 })
 export class AppdLineChartComponent implements OnInit{
 

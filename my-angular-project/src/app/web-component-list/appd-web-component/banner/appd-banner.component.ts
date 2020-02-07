@@ -7,8 +7,7 @@ import {range} from 'lodash';
 
 @Component({
   selector: 'app-appd-banner',
-  templateUrl: './appd-banner.component.html',
-  styleUrls: ['./appd-banner.component.css']
+  templateUrl: './appd-banner.component.html'
 })
 export class AppdBannerComponent implements OnInit {
 

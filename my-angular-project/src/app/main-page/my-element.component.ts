@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
-import {products} from '../products';
 
 @Component({
   selector: 'app-my-element-list',
-  templateUrl: './my-element.component.html',
-  styleUrls: ['./my-element.component.css']
+  templateUrl: './my-element.component.html'
 })
 
 export class MyElementComponent {
-  products = products;
   constructor() {}
 }
 
