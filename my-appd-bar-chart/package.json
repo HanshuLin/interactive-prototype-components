@@ -28,7 +28,7 @@
     "ag-grid-enterprise": "^22.0.0",
     "angular-highcharts": "^8.0.3",
     "document-register-element": "^1.7.2",
-    "highcharts": "^7.2.1",
+    "highcharts": "^9.0.0",
     "highcharts-custom-events": "^3.0.2",
     "lodash": "~4.17.10",
     "rxjs": "~6.4.0",
