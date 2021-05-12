@@ -30,7 +30,7 @@
     "document-register-element": "^1.7.2",
     "highcharts": "^7.2.1",
     "highcharts-custom-events": "^3.0.2",
-    "lodash": "~4.17.10",
+    "lodash": "~4.17.21",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "timezone-support": "2.0.2",
